@@ -1,0 +1,6 @@
+FROM golang:1.16-alpine
+WORKDIR /app
+ENV GO111MODULE=off
+COPY *.go ./
+RUN go build -o /fullcycle-rocks
+CMD [ "/fullcycle-rocks" ]
